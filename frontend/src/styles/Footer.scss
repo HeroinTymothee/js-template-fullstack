@@ -1,0 +1,127 @@
+.Footer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+    margin-top: 7rem;
+    h1{
+        padding: 1rem;
+        color: white;
+        width: 70%;
+        text-align: center;
+        border-bottom: solid 1px red;
+    }
+    .FooterBody{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        padding-bottom: 3rem;
+        div{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+            h2{
+                padding-top: 4rem;
+                color: white;
+                font-size: 1.5rem;
+            }
+            h3{
+                padding-top: 4rem;
+                color: white;
+                font-size: 1.5rem;
+            }
+            ul{
+                padding-top: 1rem;
+                height: 100%;
+            }
+            li{
+                margin-top: 0.5rem;
+                list-style: none;
+            }
+            a{
+                margin-top: 2rem;
+                padding-bottom: 1rem;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+}
+@media  screen and (min-width: 960px){
+    .Footer{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(27, 27, 27);
+        margin-top: 7rem;
+        h1{
+            padding: 1rem;
+            color: white;
+            width: 70%;
+            text-align: center;
+            border-bottom: solid 1px red;
+        }
+        .FooterBody{
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            div{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                a{
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1rem;
+                }
+                h2{
+                    padding-top: 4rem;
+                    color: white;
+                    font-size: 1.5rem;
+                }
+                h3{
+                    padding-top: 4rem;
+                    color: white;
+                    font-size: 1.5rem;
+                }
+                ul{
+                    padding-top: 1rem;
+                    height: 100%;
+                }
+                li{
+                    margin-top: 0.5rem;
+                    list-style: none;
+                }
+                a{
+                    margin-top: 2rem;
+                    padding-bottom: 1rem;
+                    &:hover{
+                        color: red;
+                    }
+                }
+                
+                
+            }
+        }
+    }
+}

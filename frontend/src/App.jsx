@@ -1,13 +1,19 @@
+import { useState } from "react";
 import Home from "@pages/Home";
-
-import "./App.css";
+import UserContext from "@contexts/UserContext";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "@styles/App.scss";
 
 function App() {
+  const [user, setUser] = useState();
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
+    <BrowserRouter>
+      <UserContext.Provider value={(user, setUser)}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </UserContext.Provider>
+    </BrowserRouter>
   );
 }
 

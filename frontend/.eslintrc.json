@@ -28,6 +28,10 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/no-unescaped-entities": "off",
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": ["arrow-function", "function-declaration"] }
+    ],
     "jsx-a11y/label-has-associated-control": [
       "error",
       {
@@ -42,7 +46,9 @@
           "@assets": "./src/assets",
           "@components": "./src/components",
           "@pages": "./src/pages",
-          "@services": "./src/services"
+          "@services": "./src/services",
+          "@styles": "./src/styles",
+          "@contexts": "./contexts"
         },
         "extensions": [".js", ".jsx"]
       }

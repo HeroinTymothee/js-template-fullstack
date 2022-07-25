@@ -1,36 +1,33 @@
-import Counter from "@components/Counter";
-import logo from "@assets/logo.svg";
+import axios from "axios";
+import "@styles/Home.scss";
+import Header from "@components/Header";
+import LegendsCart from "@components/LegendsCart";
+import Footer from "@components/Footer";
+import { useEffect, useState } from "react";
 
-export default function Home() {
+export default function HomeZ() {
+  const [state, setState] = useState();
+
+  const fetchData = async () => {
+    const data = await axios
+      .get("http://localhost:8000/users")
+      .then((res) => res.data);
+
+    setState(data[0]);
+  };
+
+  useEffect(() => {
+    fetchData(state);
+  }, []);
+
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <div className="Home">
+      <Header />
+      <div className="H-actualiter">
+        <h1>ACTUALITES</h1>
+      </div>
+      <LegendsCart />
+      <Footer />
+    </div>
   );
 }
